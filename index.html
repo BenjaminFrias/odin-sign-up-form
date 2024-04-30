@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up form - Odin Project</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <div class="bg">
+                <img src="odin-lined.png" alt="odin-logo">
+            </div>
+
+            <p>
+                Photo by <a href="https://unsplash.com/photos/25xggax4bSA">Halle West</a>
+                on <a href="Unsplash.com">Unsplash</a>
+            </p>
+        </div>
+        <div class="form-container">
+            <p>
+                This is not a real online service! You know you need something like this in your life to help you
+                realize
+                your deepest dreams.
+                <br>
+                Sign up <span class="italic">now</span> to get started.
+            </p>
+            <p>You <span class="italic">know</span> you want to.</p>
+
+            <form>
+                <h1>Let's do this!</h1>
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" placeholder="First name" name="first-name" id="first-name">
+                </div>
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" placeholder="Last name" name="last-name" id="last-name">
+                </div>
+                <div>
+                    <label for="email">Last Name</label>
+                    <input type="email" placeholder="Email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="phone-number">Phone number</label>
+                    <input type="number" name="phone-number" id="phone-number">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm password</label>
+                    <input type="text" name="confirm-password" id="confirm-password" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                </div>
+
+                <button type="submit">Create account</button>
+            </form>
+
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
