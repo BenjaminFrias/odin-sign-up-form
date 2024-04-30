@@ -1,0 +1,197 @@
+/* GENERAL */
+
+:root {
+    --green: #596d48;
+    --light-white: #ececec;
+    --invalid: rgb(250, 83, 77);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Norse";
+    src: url("assets/Norse-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+}
+
+/* IMAGE CONTAINER */
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    padding: 10px 0;
+    min-height: 100vh;
+    background-image: url("assets/halie-west-25xggax4bSA-unsplash.jpg");
+    background-position: top left;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.image-container .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30%;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 100%;
+    height: 120px;
+}
+
+.image-container .logo-container img {
+    width: 15%;
+}
+
+.image-container .logo-container p {
+    color: white;
+    font-family: "Norse", Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 10vw, 7rem);
+}
+
+.image-container > p {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+}
+
+.image-container > p a {
+    text-decoration: underline;
+    color: white;
+}
+
+/* FORM CONTAINER */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background: var(--light-white);
+    box-sizing: border-box;
+    width: 60%;
+    padding: 5% 0px;
+}
+
+.form-container > *:not(.form-bg) {
+    padding: 0px 30px;
+    z-index: 1;
+}
+
+.form-container > p {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+}
+
+.form-container > p span.italic {
+    font-style: italic;
+}
+
+.form-container > p:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+.form-container > form ~ p {
+    font-size: clamp(0.8rem, 5vw, 1rem);
+    font-weight: 500;
+}
+
+.form-container > form ~ p > a {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding-right: 10%;
+    margin-top: 15px;
+}
+
+form > div {
+    flex-basis: 300px;
+}
+
+form > div input {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #adadad;
+    outline: 0px solid white;
+}
+
+form > div:last-of-type {
+    margin-bottom: 15px;
+}
+
+form > div input:focus {
+    border-color: blue;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+form > div input:required:valid {
+    border-color: green;
+}
+
+form > div input:invalid {
+    border-color: var(--invalid);
+}
+
+form > div label {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+form button {
+    padding: 12px 10px;
+    flex-basis: 30%;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    background: var(--green);
+    border: none;
+    border-radius: 7px;
+    margin-top: 25px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+form p {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+}
+
+/* FORM BG */
+
+.form-bg {
+    position: absolute;
+    top: 220px;
+    width: 100%;
+    height: 260px;
+    background: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
